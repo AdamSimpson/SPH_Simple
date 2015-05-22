@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#PBS -ATRN001
+#PBS -lwalltime=02:00:00,nodes=1
+
+source $MODULESHOME/init/bash
+module load cudatoolkit
+
+cd /tmp/work/$USER
+aprun ./sph.out
